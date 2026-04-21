@@ -1,6 +1,9 @@
-# spotify-music-analysis
+# Spotify Music Analysis
 
-Exploratory Data Analysis of Spotify music trends using the Spotify API, Python, Pandas and Matplotlib | Portfolio project
+Exploratory Data Analysis of Spotify music trends using Python, Pandas and Matplotlib.
+
+This project uses a dataset of 114,000+ tracks across 125 genres from Kaggle to explore 
+music patterns, audio features, and popularity trends.
 
 ## Data Source
 
