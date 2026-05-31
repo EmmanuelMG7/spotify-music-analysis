@@ -109,3 +109,67 @@ st.markdown("""
     <p>Author: Emmanuel Mora Grajales · Portfolio Project · 2026</p>
 </div>
 """, unsafe_allow_html=True)
+
+
+
+# Total tracks
+total_tracks = df.shape[0]
+
+
+# Total Genres
+total_genres = df['track_genre'].nunique()
+
+
+# Total artists
+total_artists = df['artists'].nunique()
+
+
+# Average popularity
+average_popularity = df['popularity'].mean()
+
+
+col1, col2, col3, col4 = st.columns(4)
+
+
+# --TOTAL TRACKS--
+with col1:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Total Tracks</div>
+        <div class="kpi-value">{total_tracks:,}</div>
+        <div class="kpi-meta">songs analyzed</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# --TOTAL GENRES--
+with col2:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Total Genres</div>
+        <div class="kpi-value">{total_genres:,}</div>
+        <div class="kpi-meta">music categories</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# --TOTAL ARTISTS--
+with col3:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Total Artists</div>
+        <div class="kpi-value">{total_artists:,}</div>
+        <div class="kpi-meta">unique artists</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# --AVERAGE POPULARITY--
+with col4:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Total Tracks</div>
+        <div class="kpi-value">{round(average_popularity, 2):,}</div>
+        <div class="kpi-meta">out of 100</div>
+    </div>
+    """, unsafe_allow_html=True)
