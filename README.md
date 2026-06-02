@@ -125,6 +125,10 @@ The dashboard includes:
 ## 👤 Author
 
 Emmanuel Mora Grajales
+
 Software Engineering Student
+
 **GitHub:** [Click here](https://github.com/EmmanuelMG7)
+
 **LinkedIn:** [Click here](www.linkedin.com/in/emmanuel-mora-grajales-1203803b4)
+
