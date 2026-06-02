@@ -173,3 +173,23 @@ with col4:
         <div class="kpi-meta">out of 100</div>
     </div>
     """, unsafe_allow_html=True)
+
+
+
+# Genre Analysis
+st.markdown('<div class="section-title">🎼 Genre Analysis</div>', unsafe_allow_html=True)
+
+top_genres = df.groupby('track_genre')['popularity'].mean().sort_values(ascending=False).head(10)
+
+fig = px.bar(
+    top_genres,
+    x=top_genres.values,      # valores numéricos
+    y=top_genres.index,      # categorías
+    orientation='h',    # horizontal
+    color_discrete_sequence=['#1DB954'],  # color Spotify
+    labels={'y': '', 'x': 'Average Popularity'},
+    title='Top 10 Genres by Average Popularity'
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
