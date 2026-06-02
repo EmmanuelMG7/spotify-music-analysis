@@ -110,10 +110,21 @@ streamlit run app.py
 
 ## 📈 Dashboard
 
-**Live Dashboard:** [(https://spotify-music-analysis-emmanuelmg7.streamlit.app/)]
+**Live Dashboard:** [Click here](https://spotify-music-analysis-emmanuelmg7.streamlit.app/)
 
 The dashboard includes:
 - KPI Cards with Total Tracks, Total Genres, Total Artists & Average Popularity
-- 
+- Genre Analysis
+- Artist Analysis
+- Average Energy Analysis
+- Duration Analysis
+- Explicit vs Loudness Analysis
+- Key Conclusions
 
 
+## 👤 Author
+
+Emmanuel Mora Grajales
+Software Engineering Student
+**GitHub:** [Click here](https://github.com/EmmanuelMG7)
+**LinkedIn:** [Click here](www.linkedin.com/in/emmanuel-mora-grajales-1203803b4)
