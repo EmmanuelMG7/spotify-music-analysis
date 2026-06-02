@@ -193,3 +193,21 @@ fig = px.bar(
 
 st.plotly_chart(fig, use_container_width=True)
 
+
+
+# Top 10 Artists by Average Popularity
+st.markdown('<div class="section-title">🎼 Artists Analysis</div>', unsafe_allow_html=True)
+
+top_artists = df.groupby('artists')['popularity'].mean().sort_values(ascending = False).head(10)
+
+fig = px.bar(
+    top_artists,
+    x=top_artists.values,      # valores numéricos
+    y=top_artists.index,      # categorías
+    orientation='h',    # horizontal
+    color_discrete_sequence=['#1DB954'],  # color Spotify
+    labels={'y': '', 'x': 'Average Popularity'},
+    title='Top 10 Artists by Average Popularity'
+)
+
+st.plotly_chart(fig, use_container_width=True)
