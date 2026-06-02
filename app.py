@@ -267,3 +267,61 @@ fig = px.bar(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+
+
+# Key Conclusions
+st.markdown('<div class="section-title">📝 Key Conclusions</div>', unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Finding 01</div>
+        <div style="font-size:0.9rem; color:#FFFFFF; margin-top:8px;">
+            1. Genre popularity drives platform and artist strategy: 
+                Knowing which genres and artists are the most popular can significantly benefit both Spotify's 
+                algorithm and artists themselves. Artists can identify which genres are gaining more relevance 
+                among listeners, while Spotify's algorithm can use this information to recommend songs of these 
+                genres more frequently.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+with col2:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Finding 02</div>
+        <div style="font-size:0.9rem; color:#FFFFFF; margin-top:8px;">
+            2. Collaborations significantly boost artist popularity: 
+                Artists can leverage collaborations to boost both their own popularity and
+                that of their songs. Beyond popularity metrics, collaborations can also accelerate
+                career growth and help build a larger combined fan base between the artists involved.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+with col3:
+    st.markdown(f"""
+    <div class="kpi-card">
+        <div class="kpi-label">Finding 03</div>
+        <div style="font-size:0.9rem; color:#FFFFFF; margin-top:8px;">
+            3. Song duration impacts popularity: 
+                Understanding that song duration significantly influences popularity can improve the creative
+                process for both producers and artists. Knowing that songs between 3 and 4 minutes tend to perform
+                better can guide them toward an optimal duration: not too short, and not too long.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# ─── FOOTER ────────────────────────────────────────────────────────────────────
+st.markdown("""
+<div style="text-align:center; color:#535353; font-size:0.75rem; 
+            margin-top:48px; padding:20px; border-top:1px solid #2a2a2a;">
+    Spotify Music Analysis · Emmanuel Mora Grajales · Portfolio Project · 2026
+</div>
+""", unsafe_allow_html=True)
