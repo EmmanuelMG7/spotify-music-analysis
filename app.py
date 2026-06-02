@@ -168,7 +168,7 @@ with col3:
 with col4:
     st.markdown(f"""
     <div class="kpi-card">
-        <div class="kpi-label">Total Tracks</div>
+        <div class="kpi-label">Average Popularity</div>
         <div class="kpi-value">{round(average_popularity, 2):,}</div>
         <div class="kpi-meta">out of 100</div>
     </div>
