@@ -211,3 +211,23 @@ fig = px.bar(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+
+
+# Top 10 Genres by Average Energy
+st.markdown('<div class="section-title">🎼 Average Energy Analysis</div>', unsafe_allow_html=True)
+
+top_genres_energy = df.groupby('track_genre')['energy'].mean().sort_values(ascending = False).head(10)
+
+fig = px.bar(
+    top_genres_energy,
+    x=top_genres_energy.values,      # valores numéricos
+    y=top_genres_energy.index,      # categorías
+    orientation='h',    # horizontal
+    color_discrete_sequence=['#1DB954'],  # color Spotify
+    labels={'y': '', 'x': 'Average Popularity'},
+    title='Top 10 Genres by Average Energy'
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
