@@ -225,8 +225,26 @@ fig = px.bar(
     y=top_genres_energy.index,      # categorías
     orientation='h',    # horizontal
     color_discrete_sequence=['#1DB954'],  # color Spotify
-    labels={'y': '', 'x': 'Average Popularity'},
+    labels={'y': '', 'x': 'Average Energy'},
     title='Top 10 Genres by Average Energy'
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+
+# Song duration vs Popularity
+st.markdown('<div class="section-title">⏱️ Duration Analysis</div>', unsafe_allow_html=True)
+
+df_filtered = df[df['duration_min'] < 10]
+
+fig = px.scatter(
+    df_filtered,
+    title='Song Duration vs Popularity',
+    labels={'x': 'Duration (minutes)', 'y': 'Popularity'},
+    x = df_filtered['duration_min'],
+    y = df_filtered['popularity'],
+    color_discrete_sequence=['#1DB954']
 )
 
 st.plotly_chart(fig, use_container_width=True)
