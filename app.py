@@ -249,3 +249,21 @@ fig = px.scatter(
 
 st.plotly_chart(fig, use_container_width=True)
 
+
+
+# Explicit vs Loudness
+st.markdown('<div class="section-title">🎼 Explicit vs Loudness Analysis</div>', unsafe_allow_html=True)
+
+explicit_loudness = df.groupby('explicit')['loudness'].mean()
+
+fig = px.bar(
+    explicit_loudness,
+    x=['Non-Explicit', 'Explicit'],      # valores numéricos
+    y=explicit_loudness.values,      # categorías
+    orientation='v',    # vertical
+    color_discrete_sequence=['#1DB954'],  # color Spotify
+    labels={'x': 'Song Type', 'y': 'Average Loudness (dB)'},
+    title='Explicit vs Non-Explicit Songs: Average Loudness'
+)
+
+st.plotly_chart(fig, use_container_width=True)
